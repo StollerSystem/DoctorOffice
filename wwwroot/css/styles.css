@@ -50,3 +50,7 @@
 .CenterButtons{
   text-align: center;
 }
+.btn{
+  background-image: url("https://techcrunch.com/wp-content/uploads/2017/01/1-3-173331-r3-150dpi.jpg");
+  /* background-color: cornsilk; */
+}
