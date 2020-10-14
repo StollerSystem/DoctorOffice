@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+@model DoctorOffice.Models.Specialty
+<div class="container">
+  <div class="jumbotron">
+    <h1>Add a new Specialty</h1>
+  </div>
+  @using (Html.BeginForm())
+  {
+    @Html.LabelFor(model => model.SpecialtyType)
+    @Html.TextBoxFor(model => model.SpecialtyType, new {required = "required"})
+    @Html.LabelFor(model => model.Description)
+    @Html.TextBoxFor(model => model.Description, new {required = "required"})
+    <input type="submit" value="Add new Doctor" class="btn btn-outline-dark" />
+  }
+</div>

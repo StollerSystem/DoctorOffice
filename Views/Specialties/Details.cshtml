@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+@using DoctorOffice.Models;
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>@Model.SpecialtyType Page</h1>
+  </div>
+  @if(Model.SpecialtyDoctors.Count == 0)
+  {
+    <p>@Model.SpecialtyType has no doctors.</p>
+  }
+  <ul>
+    @foreach (SpecialtyDoctor specialtyDoctor in Model.SpecialtyDoctors)
+    {
+        <li>@specialtyDoctor.Doctor.Name</li>
+    }
+  </ul>
+  
+  <button class="btn btn-outline-dark" onclick="window.location.href='/specialties'">Specialties</button>
+@Html.ActionLink("Delete","Delete", new {id = Model.SpecialtyId}, new{@class="btn btn-outline-dark"})
+
+</div>

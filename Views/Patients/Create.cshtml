@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+@model DoctorOffice.Models.Patient
+<div class="container">
+  <div class="jumbotron">
+    <h1>Add a new Patient</h1>
+  </div>
+  @using (Html.BeginForm())
+  {
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name, new {required = "required"})
+    @Html.LabelFor(model => model.Birthday)
+    @Html.TextBoxFor(model => model.Birthday, new { @type = "date" })
+    <input type="submit" value="Add new Patient" class="btn btn-outline-dark" />
+  }
+</div>
